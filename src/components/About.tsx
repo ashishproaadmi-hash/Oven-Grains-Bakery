@@ -85,10 +85,9 @@ export default function About() {
             {/* Main Picture */}
             <div className="col-span-8 rounded-2xl overflow-hidden shadow-lg border border-[#ebdcb9]/30 aspect-[4/5] transform hover:scale-[1.01] transition-all">
               <img
-                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop&q=80"
+                src="/assets/images/hero_bakery_banner_1783069660048.jpg"
                 alt="Inside Oven Grains Bakery"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
 
@@ -96,10 +95,9 @@ export default function About() {
             <div className="col-span-4 self-end space-y-4">
               <div className="rounded-2xl overflow-hidden shadow-lg border border-[#ebdcb9]/30 aspect-square transform hover:-translate-y-1 transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1511018556340-d16986a1c194?w=400&auto=format&fit=crop&q=80"
+                  src="/assets/images/vanilla_pastry_1786258031278.jpg"
                   alt="Fresh gourmet cupcakes and pastries iced daily"
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg border border-[#ebdcb9]/30 aspect-[3/4] bg-[#faf4e8] p-4 flex flex-col justify-between text-left">

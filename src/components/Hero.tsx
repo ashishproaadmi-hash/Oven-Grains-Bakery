@@ -8,10 +8,10 @@ const makhanaCookiesImg = "/assets/images/makhana_cookies_1783069740333.jpg";
 const designerCakeImg = "/assets/images/designer_cake_1783069727828.jpg";
 const pineappleCakeImg = "/assets/images/pineapple_cake_1783069675253.jpg";
 
-// High-resolution premium backup images for safety
-const fallbackRasmalai = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80";
-const fallbackCookies = "https://images.unsplash.com/photo-1486427944299-d1955d23e317?w=600&auto=format&fit=crop&q=80";
-const fallbackDesigner = "https://images.unsplash.com/photo-1535141192574-5d4897c13636?w=600&auto=format&fit=crop&q=80";
+// High-resolution local backup images for safety
+const fallbackRasmalai = "/assets/images/rasmalai_cake_1783069692060.jpg";
+const fallbackCookies = "/assets/images/makhana_cookies_1783069740333.jpg";
+const fallbackDesigner = "/assets/images/designer_cake_1783069727828.jpg";
 
 interface HeroProps {
   onOrderNow: () => void;
@@ -254,7 +254,7 @@ export default function Hero({ onOrderNow, onCustomizeCake }: HeroProps) {
                 <div className="aspect-video rounded-2xl overflow-hidden relative bg-amber-50">
                   <img
                     src={pineappleCakeImg}
-                    onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80"; }}
+                    onError={(e) => { (e.target as HTMLImageElement).src = "/assets/images/pineapple_cake_1783069675253.jpg"; }}
                     alt="Handcrafted Luxury Pineapple Cake"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"

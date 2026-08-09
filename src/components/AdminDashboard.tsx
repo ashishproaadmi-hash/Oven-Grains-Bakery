@@ -114,7 +114,7 @@ export default function AdminDashboard({
       price: Number(newProdPrice),
       description: newProdDesc,
       category: newProdCat,
-      image: newProdImage || "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+      image: newProdImage || "/assets/images/choco_truffle_cake_1786257447897.jpg"
     };
 
     try {
