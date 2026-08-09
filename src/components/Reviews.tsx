@@ -22,7 +22,7 @@ export default function Reviews({ reviews, onAddReview }: ReviewsProps) {
       author,
       rating,
       text,
-      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" // default
+      avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23c29b38'/%3E%3Cpath d='M50 45a15 15 0 1 0 0-30 15 15 0 0 0 0 30zm0 10c-20 0-35 12-35 25v5h70v-5c0-13-15-25-35-25z' fill='%23ffffff'/%3E%3C/svg%3E" // default
     };
 
     try {

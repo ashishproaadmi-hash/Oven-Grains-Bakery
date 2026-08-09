@@ -1,5 +1,7 @@
 import React from "react";
 import { Check, ShieldCheck, Heart, Users, Truck, Sparkles } from "lucide-react";
+import bakeryBannerImg from "../assets/images/hero_bakery_banner_1786260897618.jpg";
+import vanillaPastryImg from "../assets/images/vanilla_pastry_1786261124883.jpg";
 
 export default function About() {
   const values = [
@@ -85,7 +87,7 @@ export default function About() {
             {/* Main Picture */}
             <div className="col-span-8 rounded-2xl overflow-hidden shadow-lg border border-[#ebdcb9]/30 aspect-[4/5] transform hover:scale-[1.01] transition-all">
               <img
-                src="/assets/images/hero_bakery_banner_1783069660048.jpg"
+                src={bakeryBannerImg}
                 alt="Inside Oven Grains Bakery"
                 className="w-full h-full object-cover"
               />
@@ -95,7 +97,7 @@ export default function About() {
             <div className="col-span-4 self-end space-y-4">
               <div className="rounded-2xl overflow-hidden shadow-lg border border-[#ebdcb9]/30 aspect-square transform hover:-translate-y-1 transition-all">
                 <img
-                  src="/assets/images/vanilla_pastry_1786258031278.jpg"
+                  src={vanillaPastryImg}
                   alt="Fresh gourmet cupcakes and pastries iced daily"
                   className="w-full h-full object-cover"
                 />

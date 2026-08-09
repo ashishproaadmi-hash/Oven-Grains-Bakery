@@ -783,7 +783,7 @@ export default function AdminDashboard({
                   <input
                     type="text"
                     id="prod-img-input"
-                    placeholder="https://images.unsplash.com/photo-..."
+                    placeholder="/assets/images/vanilla_cake.jpg or image URL"
                     value={newProdImage}
                     onChange={(e) => setNewProdImage(e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-[#c29b38]"

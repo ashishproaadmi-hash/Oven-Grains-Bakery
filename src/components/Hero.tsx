@@ -2,16 +2,15 @@ import React from "react";
 import { motion } from "motion/react";
 import { Phone, MessageSquare, MapPin, ArrowRight, Award, Compass, Heart, Sparkles, Flame, ShieldCheck, Star } from "lucide-react";
 
-// Local asset paths with absolute URLs matching public/
-const rasmalaiCakeImg = "/assets/images/rasmalai_cake_1783069692060.jpg";
-const makhanaCookiesImg = "/assets/images/makhana_cookies_1783069740333.jpg";
-const designerCakeImg = "/assets/images/designer_cake_1783069727828.jpg";
-const pineappleCakeImg = "/assets/images/pineapple_cake_1783069675253.jpg";
+import rasmalaiCakeImg from "../assets/images/rasmalai_cake_1786260977701.jpg";
+import makhanaCookiesImg from "../assets/images/makhana_cookies_1786261019290.jpg";
+import designerCakeImg from "../assets/images/designer_cake_1786261005305.jpg";
+import pineappleCakeImg from "../assets/images/pineapple_cake_1786261083905.jpg";
 
 // High-resolution local backup images for safety
-const fallbackRasmalai = "/assets/images/rasmalai_cake_1783069692060.jpg";
-const fallbackCookies = "/assets/images/makhana_cookies_1783069740333.jpg";
-const fallbackDesigner = "/assets/images/designer_cake_1783069727828.jpg";
+const fallbackRasmalai = rasmalaiCakeImg;
+const fallbackCookies = makhanaCookiesImg;
+const fallbackDesigner = designerCakeImg;
 
 interface HeroProps {
   onOrderNow: () => void;
@@ -254,7 +253,7 @@ export default function Hero({ onOrderNow, onCustomizeCake }: HeroProps) {
                 <div className="aspect-video rounded-2xl overflow-hidden relative bg-amber-50">
                   <img
                     src={pineappleCakeImg}
-                    onError={(e) => { (e.target as HTMLImageElement).src = "/assets/images/pineapple_cake_1783069675253.jpg"; }}
+                    onError={(e) => { (e.target as HTMLImageElement).src = pineappleCakeImg; }}
                     alt="Handcrafted Luxury Pineapple Cake"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
