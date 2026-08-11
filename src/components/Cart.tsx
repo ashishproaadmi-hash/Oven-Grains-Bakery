@@ -73,10 +73,9 @@ export default function Cart({
         let base = item.product.price;
         let scale = 1.0;
         const size = item.customization.size;
-        if (size === "0.5 kg") scale = 0.85;
-        if (size === "2.0 kg") scale = 1.8;
-        if (size === "3.0 kg") scale = 2.6;
-        if (size === "4.0 kg" || size === "5.0 kg") scale = 3.5;
+        if (size === "1/2 Pound") scale = 0.65;
+        if (size === "1 Pound") scale = 1.0;
+        if (size === "2 Pound") scale = 1.8;
 
         const customizedBase = Math.round(base * scale);
         // Added delta
@@ -125,10 +124,9 @@ export default function Cart({
       if (item.customization) {
         let scale = 1.0;
         const sz = item.customization.size;
-        if (sz === "0.5 kg") scale = 0.85;
-        if (sz === "2.0 kg") scale = 1.8;
-        if (sz === "3.0 kg") scale = 2.6;
-        if (sz === "4.0 kg" || sz === "5.0 kg") scale = 3.5;
+        if (sz === "1/2 Pound") scale = 0.65;
+        if (sz === "1 Pound") scale = 1.0;
+        if (sz === "2 Pound") scale = 1.8;
         unitPrice = Math.round(unitPrice * scale);
         if (item.customization.eggless) unitPrice += 50;
         if (item.customization.photoUrl) unitPrice += 200;
@@ -273,10 +271,9 @@ export default function Cart({
                 if (item.customization) {
                   let scale = 1.0;
                   const size = item.customization.size;
-                  if (size === "0.5 kg") scale = 0.85;
-                  if (size === "2.0 kg") scale = 1.8;
-                  if (size === "3.0 kg") scale = 2.6;
-                  if (size === "4.0 kg" || size === "5.0 kg") scale = 3.5;
+                  if (size === "1/2 Pound") scale = 0.65;
+                  if (size === "1 Pound") scale = 1.0;
+                  if (size === "2 Pound") scale = 1.8;
                   
                   price = Math.round(price * scale);
                   if (item.customization.eggless) price += 50;

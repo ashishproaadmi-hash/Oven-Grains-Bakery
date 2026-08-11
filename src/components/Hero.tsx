@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Phone, MessageSquare, MapPin, ArrowRight, Award, Compass, Heart, Sparkles, Flame, ShieldCheck, Star } from "lucide-react";
+import Logo from "./Logo";
 
 import rasmalaiCakeImg from "../assets/images/rasmalai_cake_1786260977701.jpg";
 import makhanaCookiesImg from "../assets/images/makhana_cookies_1786261019290.jpg";
@@ -59,6 +60,21 @@ export default function Hero({ onOrderNow, onCustomizeCake }: HeroProps) {
             className="lg:col-span-6 space-y-6 sm:space-y-8 text-center lg:text-left"
           >
             
+            {/* Brand Logo & Tagline Banner */}
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="flex flex-col items-center lg:items-start gap-2 mb-2"
+            >
+              <div className="bg-[#2a170f]/90 p-3 rounded-2xl border border-[#ffd700]/30 shadow-xl inline-block">
+                <Logo size="md" showTagline={false} />
+              </div>
+              <span className="text-[#ffd700] font-serif italic text-lg sm:text-xl font-bold tracking-wide drop-shadow-md">
+                “Baking fresh memories”
+              </span>
+            </motion.div>
+
             {/* Elite Badge */}
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
@@ -107,7 +123,7 @@ export default function Hero({ onOrderNow, onCustomizeCake }: HeroProps) {
               className="text-base sm:text-lg text-[#eae0d5] max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal opacity-95"
             >
               Savor Ranchi's most authentic eggless designer cakes, custom premium fusion sweets, 
-              and delicate artisan products. Handcrafted at <strong>Sahjanand Chowk, Harmu Road</strong> with 
+              and delicate artisan products. Handcrafted at <strong>Sahjanand Chowk (Harmu) & Manatu Chowk (Ring Road)</strong> with 
               pure dairy, fresh organic ingredients, and zero artificial preservatives.
             </motion.p>
 
@@ -186,8 +202,8 @@ export default function Hero({ onOrderNow, onCustomizeCake }: HeroProps) {
                 <div className="bg-[#4285f4] text-white p-2.5 rounded-xl transition">
                   <MapPin className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-[10px] font-extrabold tracking-wider text-[#73a6fc] uppercase mt-2">Find Outlet</span>
-                <span className="text-[9px] text-[#eae0d5]/80 mt-0.5 font-bold">Sahjanand Chowk</span>
+                <span className="text-[10px] font-extrabold tracking-wider text-[#73a6fc] uppercase mt-2">Find Outlets</span>
+                <span className="text-[9px] text-[#eae0d5]/80 mt-0.5 font-bold">Harmu & Manatu</span>
               </a>
             </motion.div>
 

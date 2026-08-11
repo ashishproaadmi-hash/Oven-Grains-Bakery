@@ -1,6 +1,7 @@
 import React from "react";
 import { ShoppingCart, Phone, Store, Clock, Heart } from "lucide-react";
 import { CartItem } from "../types";
+import Logo from "./Logo";
 
 interface NavbarProps {
   cart: CartItem[];
@@ -37,7 +38,7 @@ export default function Navbar({
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1">
             <Store className="w-3.5 h-3.5 text-[#d4af37]" />
-            Sahjanand Chowk, Harmu Road, Ranchi
+            Harmu & Manatu Outlets, Ranchi
           </span>
           <span className="flex items-center gap-1">
             <Clock className="w-3.5 h-3.5 text-[#d4af37]" />
@@ -60,20 +61,10 @@ export default function Navbar({
         {/* Brand Logo */}
         <button
           onClick={() => onNavigate("home")}
-          className="flex items-center gap-2 cursor-pointer text-left"
+          className="flex items-center gap-2 cursor-pointer text-left bg-[#3d271d] py-1.5 px-3 rounded-2xl border border-[#ffd700]/30 shadow-sm"
           id="nav-logo"
         >
-          <div className="bg-[#3d271d] text-[#ebdcb9] p-2 rounded-full shadow-md flex items-center justify-center border border-[#ffd700]/30">
-            <span className="font-serif font-black tracking-widest text-lg">OG</span>
-          </div>
-          <div>
-            <span className="font-serif font-bold text-xl sm:text-2xl text-[#3d271d] block tracking-tight leading-none">
-              Oven Grains
-            </span>
-            <span className="text-[10px] font-sans uppercase tracking-widest text-[#9d7e5d] font-bold block mt-0.5">
-              Premium Bakery & Cake Shop
-            </span>
-          </div>
+          <Logo size="sm" showTagline={true} />
         </button>
 
         {/* Desktop links */}

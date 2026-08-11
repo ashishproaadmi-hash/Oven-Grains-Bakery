@@ -43,39 +43,56 @@ export default function Contact() {
             
             {/* Quick Contacts */}
             <div className="bg-[#faf6ed] p-6 rounded-2xl border border-[#ebdcb9]/40 space-y-4 text-[#3d271d]">
-              <h3 className="font-serif font-bold text-lg mb-4">Oven Grains Bakery</h3>
+              <h3 className="font-serif font-bold text-lg mb-2">Oven Grains Bakery Outlets</h3>
               
-              {/* Address */}
-              <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-[#c29b38] shrink-0 mt-0.5" />
-                <div className="text-xs text-gray-700 leading-relaxed">
-                  <span className="font-bold block text-[#3d271d]">Baking Outlet Address</span>
-                  Shop No. G-6 & 7, Maa Laxmi Plaza, Sahjanand Chowk, Harmu Road, Ranchi, Jharkhand 834002
-                </div>
+              {/* Outlet 1 */}
+              <div className="pb-3 border-b border-[#ebdcb9]/60 space-y-1">
+                <span className="font-bold text-xs text-[#3d271d] flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4 text-[#c29b38]" />
+                  Outlet 1: Mahalaxmi Plaza, Sahjanand Chowk, Harmu
+                </span>
+                <p className="text-[11px] text-gray-600 pl-5">Shop No. G-6 & 7, Mahalaxmi Plaza, Harmu Road, Ranchi</p>
               </div>
 
-              {/* Phone */}
-              <div className="flex gap-3">
-                <Phone className="w-5 h-5 text-[#c29b38] shrink-0 mt-0.5" />
-                <div className="text-xs text-gray-700">
-                  <span className="font-bold block text-[#3d271d]">Hotline / Phone Orders</span>
-                  <a href="tel:+919939123878" className="hover:underline text-[#c29b38] font-bold">+91 99391 23878</a>
-                </div>
+              {/* Outlet 2 */}
+              <div className="pb-3 border-b border-[#ebdcb9]/60 space-y-1">
+                <span className="font-bold text-xs text-[#3d271d] flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4 text-[#c29b38]" />
+                  Outlet 2: Opp. Hotel La Vista, Manatu Chowk, Ring Road
+                </span>
+                <p className="text-[11px] text-gray-600 pl-5">Manatu Chowk, Ring Road, Ranchi ("Baking Memories One Slice At A Time")</p>
               </div>
 
-              {/* WhatsApp */}
-              <div className="flex gap-3">
-                <MessageSquare className="w-5 h-5 text-[#c29b38] shrink-0 mt-0.5" />
-                <div className="text-xs text-gray-700">
-                  <span className="font-bold block text-[#3d271d]">WhatsApp Chat Orders</span>
+              {/* Contact Numbers */}
+              <div className="space-y-2 pt-1">
+                <span className="font-bold block text-xs text-[#3d271d]">Hotline & WhatsApp Numbers</span>
+                
+                {/* Order Number */}
+                <div className="flex items-center justify-between text-xs bg-white p-2.5 rounded-xl border border-[#ebdcb9]/60">
+                  <span className="flex items-center gap-1.5 font-bold text-[#3d271d]">
+                    <Phone className="w-3.5 h-3.5 text-[#c29b38]" />
+                    <a href="tel:+919939123878" className="hover:underline text-[#c29b38]">+91 99391 23878</a>
+                  </span>
                   <a
                     href="https://wa.me/919939123878?text=Hello%20Oven%20Grains%2C%20I'd%20like%20to%20place%20an%20order."
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:underline text-emerald-700 font-bold"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg transition"
                   >
-                    +91 99391 23878
+                    WhatsApp Order
                   </a>
+                </div>
+
+                {/* Display Numbers */}
+                <div className="grid grid-cols-2 gap-2 text-xs text-gray-700 font-mono pt-1">
+                  <div className="bg-white p-2 rounded-lg border border-gray-100">
+                    <span className="text-[10px] text-gray-400 block">Contact Line 2</span>
+                    <strong>+91 88253 55475</strong>
+                  </div>
+                  <div className="bg-white p-2 rounded-lg border border-gray-100">
+                    <span className="text-[10px] text-gray-400 block">Contact Line 3</span>
+                    <strong>+91 99391 45534</strong>
+                  </div>
                 </div>
               </div>
 

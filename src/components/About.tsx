@@ -53,7 +53,7 @@ export default function About() {
               Crafting Memories, One Fresh Slice At A Time
             </h2>
             <p className="text-[#5c4a40] leading-relaxed">
-              Nestled in the bustling heart of Ranchi at <strong>Sahjanand Chowk</strong>, 
+              Nestled in Ranchi with flagship outlets at <strong>Sahjanand Chowk (Harmu)</strong> and <strong>Manatu Chowk (Ring Road)</strong>, 
               Oven Grains is a premier designer patisserie. We are a family of passionate decorators 
               and pastry chefs committed to bringing genuine warmth, buttery textures, and luxurious cream formulations 
               to your family's landmark celebrations.

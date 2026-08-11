@@ -41,7 +41,7 @@ export default function ProductDetailModal({
   onToggleWishlist
 }: ProductDetailModalProps) {
   // Option selections
-  const [selectedSize, setSelectedSize] = useState("1.0 kg");
+  const [selectedSize, setSelectedSize] = useState("1 Pound");
   const [selectedFlavor, setSelectedFlavor] = useState("");
   const [isEggless, setIsEggless] = useState(true);
   const [cakeMessage, setCakeMessage] = useState("");
@@ -60,7 +60,7 @@ export default function ProductDetailModal({
   // Initialize options based on product
   useEffect(() => {
     if (product) {
-      setSelectedSize(product.sizes?.[0] || "1.0 kg");
+      setSelectedSize(product.sizes?.[0] || "1 Pound");
       setSelectedFlavor(product.flavors?.[0] || "Standard Deluxe");
       setIsEggless(true); // default to Veg in Ranchi context
       setCakeMessage("");
@@ -111,10 +111,9 @@ export default function ProductDetailModal({
     let base = product.price;
     let scale = 1.0;
     
-    if (selectedSize === "0.5 kg") scale = 0.85;
-    if (selectedSize === "2.0 kg") scale = 1.8;
-    if (selectedSize === "3.0 kg") scale = 2.6;
-    if (selectedSize === "4.0 kg" || selectedSize === "5.0 kg") scale = 3.5;
+    if (selectedSize === "1/2 Pound") scale = 0.65;
+    if (selectedSize === "1 Pound") scale = 1.0;
+    if (selectedSize === "2 Pound") scale = 1.8;
 
     let total = Math.round(base * scale);
     
@@ -306,7 +305,7 @@ export default function ProductDetailModal({
                   </div>
                   <div>
                     <span className="text-[10px] text-gray-400 block font-mono">Baking Station Location</span>
-                    <span className="text-xs font-bold text-white">Sahjanand Chowk, Harmu Road, Ranchi</span>
+                    <span className="text-xs font-bold text-white">Harmu & Manatu Outlets, Ranchi</span>
                   </div>
                 </div>
 
@@ -422,9 +421,9 @@ export default function ProductDetailModal({
                       </label>
                       <div className="grid grid-cols-3 gap-2">
                         {[
-                          { id: "0.5 kg", desc: "Serves 3-5", label: "0.5 kg (Mini)" },
-                          { id: "1.0 kg", desc: "Serves 8-12", label: "1.0 kg (Best!)" },
-                          { id: "2.0 kg", desc: "Serves 15-20", label: "2.0 kg (Party)" }
+                          { id: "1/2 Pound", desc: "Serves 2-4", label: "1/2 Pound" },
+                          { id: "1 Pound", desc: "Serves 6-8", label: "1 Pound" },
+                          { id: "2 Pound", desc: "Serves 12-16", label: "2 Pound" }
                         ].map((sz) => (
                           <button
                             key={sz.id}
@@ -643,7 +642,7 @@ export default function ProductDetailModal({
                     </div>
                     <div className="flex items-start gap-1.5 text-emerald-950 sm:col-span-2">
                       <Clock className="w-3.5 h-3.5 text-[#c29b38] shrink-0 mt-0.5 fill-amber-100" />
-                      <span><strong>Ranchi Fast Transit</strong>: Handcrafted at Sahjanand Chowk & delivered fast across Harmu, Lalpur, Kanke & Argora.</span>
+                      <span><strong>Ranchi Fast Transit</strong>: Handcrafted at Harmu & Manatu outlets & delivered fast across Ranchi.</span>
                     </div>
                   </div>
                 </div>

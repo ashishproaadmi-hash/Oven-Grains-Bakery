@@ -3,6 +3,7 @@ import { Sparkles, MessageSquare, Phone, MapPin, Award, ArrowUp } from "lucide-r
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import OutletsSection from "./components/OutletsSection";
 import Menu from "./components/Menu";
 import CakeCustomizer from "./components/CakeCustomizer";
 import Cart from "./components/Cart";
@@ -10,6 +11,7 @@ import WishlistDrawer from "./components/WishlistDrawer";
 import OrderTracker from "./components/OrderTracker";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
+import Logo from "./components/Logo";
 import { Product, CartItem, Order, Review, InventoryItem, CustomizedCake } from "./types";
 import { INITIAL_PRODUCTS, INITIAL_REVIEWS, INITIAL_ORDERS } from "./data/menuData";
 
@@ -322,7 +324,10 @@ export default function App() {
             onAddReview={handleAddReview}
           />
 
-          {/* 7. Contact Details and Map */}
+          {/* 7. Both Bakery Outlets Section */}
+          <OutletsSection />
+
+          {/* 8. Contact Details and Map */}
           <Contact />
 
         </main>
@@ -352,20 +357,18 @@ export default function App() {
       />
 
       {/* FOOTER SECTION */}
-      <footer className="bg-[#3d271d] text-white py-12 border-t border-[#ffd700]/10">
+      <footer className="bg-[#2a170f] text-white py-12 border-t border-[#ffd700]/20">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Logo & Slogan */}
-          <div className="space-y-4">
-            <span className="font-serif font-extrabold text-2xl text-white block tracking-tight">
-              Oven Grains
-            </span>
-            <p className="text-[#ebdcb9] text-xs leading-relaxed">
-              Baking freshly crafted happiness daily at Sahjanand Chowk, Harmu Road, Ranchi. 
-              Enjoy Ranchi's favorite Pineapple, Rasmalai, and designer custom cakes under strict hygiene standards.
+          <div className="space-y-3">
+            <Logo size="md" showTagline={true} />
+            <p className="text-[#ebdcb9] text-xs leading-relaxed mt-2">
+              Baking fresh memories daily across our 2 outlets in Ranchi (Harmu & Manatu Chowk).
+              Enjoy pure vegetarian gourmet cakes, pastries, and custom tiers crafted with love.
             </p>
-            <span className="text-[10px] text-[#ffd700]/70 uppercase font-mono tracking-widest font-bold block">
-              ★ 4.9 Star Local Rated Shop
+            <span className="text-[10px] text-[#ffd700]/80 uppercase font-mono tracking-widest font-bold block">
+              ★ 4.9 Star Local Rated Bakery
             </span>
           </div>
 
@@ -373,37 +376,47 @@ export default function App() {
           <div className="space-y-3">
             <h4 className="font-serif font-bold text-sm text-[#ebdcb9]">Quick Links</h4>
             <ul className="text-xs space-y-2 text-[#f4ecd8]">
-              <li><button onClick={() => handleNavigate("home")} className="hover:text-white cursor-pointer transition">Home Welcome</button></li>
-              <li><button onClick={() => handleNavigate("about")} className="hover:text-white cursor-pointer transition">Our Story</button></li>
-              <li><button onClick={() => handleNavigate("menu")} className="hover:text-white cursor-pointer transition">Bakery Menu</button></li>
-              <li><button onClick={() => handleNavigate("custom")} className="hover:text-white cursor-pointer transition">Customizer Studio</button></li>
+              <li><button onClick={() => handleNavigate("home")} className="hover:text-[#ffd700] cursor-pointer transition">Home</button></li>
+              <li><button onClick={() => handleNavigate("about")} className="hover:text-[#ffd700] cursor-pointer transition">Our Story</button></li>
+              <li><button onClick={() => handleNavigate("menu")} className="hover:text-[#ffd700] cursor-pointer transition">Bakery Menu</button></li>
+              <li><button onClick={() => handleNavigate("custom")} className="hover:text-[#ffd700] cursor-pointer transition">Customizer Studio</button></li>
+              <li><button onClick={() => handleNavigate("outlets")} className="hover:text-[#ffd700] cursor-pointer transition">Outlets & Locations</button></li>
             </ul>
           </div>
 
-          {/* Popular Categories */}
+          {/* Outlet Locations */}
           <div className="space-y-3">
-            <h4 className="font-serif font-bold text-sm text-[#ebdcb9]">Our Categories</h4>
-            <ul className="text-xs space-y-2 text-[#f4ecd8]">
-              <li>Birthday & Anniversary Cakes</li>
-              <li>Tiered Custom designer cakes</li>
-              <li>Fresh Fusion cookies & pastries</li>
-              <li>Natural sourdough country breads</li>
-            </ul>
-          </div>
-
-          {/* Outlet Contact Details */}
-          <div className="space-y-3">
-            <h4 className="font-serif font-bold text-sm text-[#ebdcb9]">Sahjanand Plaza Outlet</h4>
+            <h4 className="font-serif font-bold text-sm text-[#ebdcb9]">Our 2 Ranchi Outlets</h4>
             <div className="text-xs text-[#f4ecd8] space-y-2.5">
-              <p className="flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#ffd700] shrink-0" />
-                Maa Laxmi Plaza, Sahjanand Chowk, Ranchi
-              </p>
-              <p className="flex items-center gap-1.5">
-                <Phone className="w-4 h-4 text-[#ffd700] shrink-0" />
+              <div>
+                <strong className="text-white block">1. Harmu Outlet:</strong>
+                <p className="text-[11px] text-[#ebdcb9]/80">Mahalaxmi Plaza, Sahjanand Chowk, Harmu</p>
+              </div>
+              <div>
+                <strong className="text-white block">2. Manatu Outlet:</strong>
+                <p className="text-[11px] text-[#ebdcb9]/80">Opp. Hotel La Vista, Manatu Chowk, Ring Road</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Details */}
+          <div className="space-y-3">
+            <h4 className="font-serif font-bold text-sm text-[#ebdcb9]">Bakery Contact Lines</h4>
+            <div className="text-xs text-[#f4ecd8] space-y-2">
+              <p className="flex items-center gap-1.5 font-bold text-[#ffd700]">
+                <Phone className="w-3.5 h-3.5 text-[#ffd700] shrink-0" />
                 <a href="tel:+919939123878" className="hover:underline">+91 99391 23878</a>
+                <span className="text-[9px] bg-emerald-700 text-white px-1.5 py-0.2 rounded font-normal">Order/WA</span>
               </p>
-              <p className="text-[10px] text-gray-300 font-mono mt-2">
+              <p className="flex items-center gap-1.5 text-gray-300">
+                <Phone className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                <span>+91 88253 55475</span>
+              </p>
+              <p className="flex items-center gap-1.5 text-gray-300">
+                <Phone className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                <span>+91 99391 45534</span>
+              </p>
+              <p className="text-[10px] text-gray-400 font-mono pt-2">
                 © {new Date().getFullYear()} Oven Grains Bakery. All rights reserved.
               </p>
             </div>

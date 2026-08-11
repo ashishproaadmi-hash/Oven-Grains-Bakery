@@ -29,7 +29,7 @@ export default function CakeCustomizer({
 
   // State
   const [selectedBase, setSelectedBase] = useState<Product | null>(null);
-  const [size, setSize] = useState("1.0 kg");
+  const [size, setSize] = useState("1 Pound");
   const [flavor, setFlavor] = useState("Pineapple Delight");
   const [eggless, setEggless] = useState(true);
   const [message, setMessage] = useState("");
@@ -111,10 +111,9 @@ export default function CakeCustomizer({
     let price = getBasePrice();
     
     // Multipliers for size
-    if (size === "0.5 kg") price = price * 0.85;
-    if (size === "2.0 kg") price = price * 1.8;
-    if (size === "3.0 kg") price = price * 2.6;
-    if (size === "4.0 kg" || size === "5.0 kg") price = price * 3.5;
+    if (size === "1/2 Pound") price = price * 0.65;
+    if (size === "1 Pound") price = price * 1.0;
+    if (size === "2 Pound") price = price * 1.8;
 
     // Surcharge for customization / Eggless
     if (eggless) price += 50;
@@ -392,8 +391,8 @@ export default function CakeCustomizer({
                 <label className="block text-sm font-bold text-[#3d271d] mb-2.5">
                   Step 2: Choose Cake Size (Weight)
                 </label>
-                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
-                  {["0.5 kg", "1.0 kg", "2.0 kg", "3.0 kg", "5.0 kg"].map((s) => (
+                <div className="grid grid-cols-3 gap-2">
+                  {["1/2 Pound", "1 Pound", "2 Pound"].map((s) => (
                     <button
                       key={s}
                       type="button"
@@ -406,7 +405,7 @@ export default function CakeCustomizer({
                     >
                       {s}
                       <span className="text-[8px] block opacity-85 font-normal mt-0.5 font-mono">
-                        {s === "0.5 kg" ? "Single layer" : s === "1.0 kg" ? "Standard" : "Celebration Tier"}
+                        {s === "1/2 Pound" ? "Mini" : s === "1 Pound" ? "Standard" : "Party Tier"}
                       </span>
                     </button>
                   ))}
